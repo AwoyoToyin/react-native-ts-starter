@@ -23,7 +23,6 @@
     "@types/react-native": "^0.52.0",
     "babel-jest": "22.0.6",
     "babel-preset-react-native": "4.0.0",
-    "codelyzer": "^4.0.2",
     "concurrently": "^3.5.1",
     "jest": "22.0.6",
     "react-test-renderer": "16.2.0",
