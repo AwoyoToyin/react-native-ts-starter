@@ -1,5 +1,5 @@
 {
-  "name": "rn-ts-starter",
+  "name": "taxi",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,11 +11,26 @@
     "tsc": "tsc",
     "clean": "rimraf artifacts",
     "build": "npm run clean && npm run tsc --",
-    "lint": "tslint src/**/*.ts"
+    "lint": "tslint src/**/*.ts",
+    "postinstall": "remotedev-debugger --hostname=localhost --injectserver=reactnative",
+    "resolve:icons": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json"
+  },
+  "remotedev": {
+    "hostname": "localhost"
   },
   "dependencies": {
+    "axios": "^0.17.1",
+    "native-base": "^2.3.6",
     "react": "16.2.0",
-    "react-native": "0.52.0"
+    "react-addons-update": "^15.6.2",
+    "react-native": "0.52.0",
+    "react-native-loading-spinner-overlay": "^0.5.2",
+    "react-native-router-flux": "^4.0.0-beta.27",
+    "react-native-vector-icons": "^4.5.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "@types/jest": "^22.0.1",
@@ -26,6 +41,9 @@
     "concurrently": "^3.5.1",
     "jest": "22.0.6",
     "react-test-renderer": "16.2.0",
+    "redux-logger": "^3.0.6",
+    "remote-redux-devtools": "^0.5.12",
+    "remotedev-rn-debugger": "^0.8.3",
     "rimraf": "^2.6.2",
     "tslint": "^5.9.1",
     "typescript": "^2.6.2"
